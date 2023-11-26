@@ -7,6 +7,35 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+//Psuedo Code
+   // Initialize Starting and EndPointer to comparison
+   // while loop to compare to pointer
+   // if starting point with string is not equal to ending point with string it will return false
+   // move pointers towards the center
+   // if loop completes, the string is  a palindrome return true;
+function palindrome(str) {
+   return str.split('').every((char, i) => {
+     return char === str[str.length - i - 1];
+   })
+}
 
+// function palindrome(str) {
+//     const reversedStr = str.split('').reverse().join('');
+//     return reversedStr === str
+//  }
+// function palindrome(str) {
+//     let startingPoint = 0;
+//     let endingPoint = str.length -1;
+ 
+//     while(startingPoint < endingPoint) {
+//        if ( str[startingPoint] !== str[endingPoint]) {
+//          return false;
+//        }
+//        startingPoint = startingPoint + 1;
+//        endingPoint = endingPoint -1;
+//     }
+//     return true;
+//  }
+
+palindrome('hello')
 module.exports = palindrome;
