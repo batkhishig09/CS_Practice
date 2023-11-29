@@ -12,6 +12,8 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+function midpoint(list) {
+    //s
+}
 
 module.exports = midpoint;
